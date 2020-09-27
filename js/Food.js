@@ -12,8 +12,7 @@ class Food{
 
     updateFoodStock(lfoodStock){
         console.log("updateFoodStock"+lfoodStock);
-
-        foodStock=lfoodStock-1;
+        foodStock=lfoodStock;
     }
 
    /* deductFood(){
@@ -24,15 +23,16 @@ class Food{
         var x =80,y=100;
 
         imageMode(CENTER);
-        image(this.image,720,220,70,70)
+        //image(this.image,720,220,70,70)
 
         console.log("in Food foodStock"+foodStock);
 
-        foodStock=20;
-
-        if(this.foodStock!=0){
-            for(var i=0;i<this.foodStock;i++){
-                if(1%10==0){
+        if(foodStock!=0){
+            console.log("inside if"+foodStock);
+            for(var i=0;i<foodStock;i++){
+                console.log("inside if i "+i+ "   "+foodStock);
+               if(i%10==0){
+                    console.log("inside if i%10 "+i+ "   "+foodStock);
                     x=80;
                     y=y+50;
                 }
@@ -42,3 +42,4 @@ class Food{
         }
     }
 }
+ 
